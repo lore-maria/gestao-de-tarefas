@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestão de Tarefas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+     <header>
+        <div class="container header-container">
+            
+            <div class="info-header">
+                <h1>Gestão de Tarefas</h1>
+                <p>Gerencie suas atividades diárias com facilidade!</p>
+                <img src="logo.png" alt="Logo Gestão de Tarefas" class="logo">
+            </div>
+            <nav>
+                <a href="#lista-atividades">Minhas Atividades</a>
+                <a href="#adicionar-atividade">Nova Atividade</a>
+                <a href="#buscar-atividade">Buscar Atividade</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="adicionar-atividade">
+            <h2>Nova Atividade:</h2>
+            <form id="form-adicionar">
+                <input type="text" id="titulo" placeholder="Título" required>
+                <input type="text" id="descricao" placeholder="Descrição">
+                <input type="number" id="id-usuario" placeholder="ID do Usuário" required>
+                <label for="status">Concluído?</label>
+                <input type="checkbox" id="status">
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section id="buscar-atividade">
+            <h2>Buscar Atividade:</h2>
+            <form id="form-buscar">
+                <input type="number" id="buscar-id" placeholder="ID do Usuário" required>
+                <button type="submit">Buscar</button>
+            </form>
+            <ul id="resultado-busca"></ul>
+        </section>
+
+        <section id="lista-atividades">
+            <h2>Lista de Atividades:</h2>
+            <ul id="atividades"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gestor de Tarefas - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
